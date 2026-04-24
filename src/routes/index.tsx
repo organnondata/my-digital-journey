@@ -18,17 +18,17 @@ import { Footer } from "@/components/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Seu Nome — Marketing, Growth & Tecnologia" },
+      { title: "Christopher Miranda | Currículo" },
       {
         name: "description",
         content:
-          "Currículo interativo: experiência prática em marketing digital, ecossistemas digitais, tráfego pago, conteúdo e operação de canais de venda.",
+          "Apresentação profissional e trajetória de Christopher Miranda em marketing, tecnologia e projetos digitais.",
       },
-      { property: "og:title", content: "Seu Nome — Marketing, Growth & Tecnologia" },
+      { property: "og:title", content: "Christopher Miranda | Currículo" },
       {
         property: "og:description",
         content:
-          "Apresentação profissional: trajetória em marketing, growth e desenvolvimento de produto digital.",
+          "Apresentação profissional e trajetória em marketing, tecnologia e projetos digitais.",
       },
       { property: "og:image", content: ogImage },
       { property: "og:type", content: "website" },

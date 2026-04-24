@@ -40,11 +40,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] tracking-tight"
           >
-            Seu Nome.
+            Christopher
             <br />
-            <span className="text-gradient-green">Marketing,</span>
-            <br />
-            Growth & Tecnologia.
+            <span className="text-gradient-green">Miranda.</span>
           </motion.h1>
 
           <motion.p
@@ -53,9 +51,31 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-8 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed"
           >
-            Construo operações digitais e ecossistemas para marcas, eventos e
-            criadores. Vendas, conteúdo, tráfego e produto — em um só fluxo.
+            Este é um resumo da minha trajetória profissional, com foco nos
+            principais projetos, experiências e trabalhos que desenvolvi ao
+            longo dos últimos anos.
           </motion.p>
+
+          <motion.ol
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="mt-8 max-w-xl space-y-2 text-sm text-foreground/80"
+          >
+            {[
+              "Desenvolvimento de Ecossistema Digital",
+              "Projetos e Freelances",
+              "Experiência Profissional (XBRI Pneus)",
+              "Consultorias e Outros Projetos",
+            ].map((item, i) => (
+              <li key={item} className="flex items-baseline gap-3">
+                <span className="text-accent-vivid font-mono text-xs">
+                  0{i + 1}
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </motion.ol>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -89,14 +109,16 @@ export function Hero() {
           <div className="aspect-[4/5] relative rounded-2xl overflow-hidden border border-border bg-surface-elevated">
             <img
               src={portrait}
-              alt="Foto profissional (placeholder)"
+              alt="Christopher Miranda"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
               <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Foto</p>
-                <p className="text-sm text-foreground/90">Substituir placeholder</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                  Currículo
+                </p>
+                <p className="text-sm text-foreground/90">Christopher Miranda</p>
               </div>
               <span className="size-2 rounded-full bg-accent-vivid" />
             </div>

@@ -34,6 +34,12 @@ export const Route = createRootRoute({
       { name: "theme-color", content: "#0d2218" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Currículo Interativo" },
+      { name: "twitter:title", content: "Currículo Interativo" },
+      { property: "og:description", content: "Currículo interativo profissional" },
+      { name: "twitter:description", content: "Currículo interativo profissional" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/18a62a23-bb10-4b4f-b016-0a55dc7078f6/id-preview-d6a5a93b--6f6179b4-c666-41bf-aca9-7d624efe6451.lovable.app-1777061590025.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/18a62a23-bb10-4b4f-b016-0a55dc7078f6/id-preview-d6a5a93b--6f6179b4-c666-41bf-aca9-7d624efe6451.lovable.app-1777061590025.png" },
     ],
     links: [
       {

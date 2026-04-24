@@ -397,11 +397,21 @@ function Index() {
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-accent-vivid mb-5">
               Trajetória na empresa
             </p>
-            <p className="text-lg md:text-2xl leading-relaxed text-foreground/90 max-w-4xl">
-              Iniciei na área comercial e, em pouco tempo, evoluí para o time de
-              vendas de grandes volumes. Posteriormente, assumi a frente do
-              marketing digital da empresa com foco em crescimento das equipes.
-            </p>
+            <div className="space-y-6 max-w-4xl">
+              <p className="text-lg md:text-2xl leading-relaxed text-foreground/90">
+                Iniciando na empresa pelo setor de vendas diretas, evoluí
+                rapidamente para a área comercial do time de vendas de grandes
+                volumes. Após alguns meses, assumi a transição para a liderança
+                do marketing digital.
+              </p>
+              <p className="text-lg md:text-2xl leading-relaxed text-foreground/90">
+                Nessa posição, assumi a frente da operação com o objetivo de
+                integrar estratégias de atração e conversão para impulsionar o
+                crescimento dos times de vendas, enquanto aprendia também com o
+                atual CMO sobre estratégias de marketing tradicionais, mas
+                poderosas.
+              </p>
+            </div>
           </div>
 
           {/* Atuações */}

@@ -205,7 +205,7 @@ function Index() {
           <FeatureList items={ecossistemaFeatures} />
           <div className="mt-10 flex flex-wrap gap-4">
             <a
-              href="https://achi-bilu-feed.vercel.app/feed"
+              href="https://achi-bilu-feed.vercel.app"
               target="_blank"
               rel="noreferrer"
               className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-accent-vivid text-accent-vivid-foreground font-semibold hover:glow-green transition-all"

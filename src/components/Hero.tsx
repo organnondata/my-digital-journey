@@ -55,7 +55,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] tracking-tight"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] tracking-tight text-center md:text-left"
           >
             Christopher
             <br />
@@ -66,7 +66,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-8 max-w-2xl text-lg md:text-2xl text-foreground/90 leading-relaxed font-light"
+            className="mt-8 max-w-2xl text-lg md:text-2xl text-foreground/90 leading-relaxed font-light text-center md:text-left mx-auto md:mx-0"
           >
             Este é um resumo da minha trajetória profissional, apresentando os
             principais projetos, experiências e construções que desenvolvi ao

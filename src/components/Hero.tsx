@@ -17,13 +17,33 @@ export function Hero() {
         <div className="absolute inset-0 bg-grid opacity-40" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl w-full grid md:grid-cols-[1.4fr_1fr] gap-12 md:gap-20 items-center">
+      <div className="relative mx-auto max-w-6xl w-full grid md:grid-cols-[1.4fr_1fr] gap-10 md:gap-20 items-center">
         <div>
+          {/* Mobile portrait — only visible on small screens, sits at the top */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7 }}
+            className="md:hidden mb-8 flex justify-center"
+          >
+            <div className="relative">
+              <div className="size-36 sm:size-44 rounded-full overflow-hidden border-2 border-accent-vivid/40 bg-surface-elevated shadow-xl">
+                <img
+                  src={portrait}
+                  alt="Christopher Miranda"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <span className="absolute bottom-2 right-2 size-3 rounded-full bg-accent-vivid ring-2 ring-background" />
+              <div className="absolute -inset-3 -z-10 rounded-full bg-accent-vivid/20 blur-2xl" />
+            </div>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex items-center gap-3 mb-8"
+            className="flex items-center gap-3 mb-8 justify-center md:justify-start"
           >
             <span className="h-px w-10 bg-accent-vivid" />
             <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
@@ -35,7 +55,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] tracking-tight"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] tracking-tight text-center md:text-left"
           >
             Christopher
             <br />
@@ -46,7 +66,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-8 max-w-2xl text-lg md:text-2xl text-foreground/90 leading-relaxed font-light"
+            className="mt-8 max-w-2xl text-lg md:text-2xl text-foreground/90 leading-relaxed font-light text-center md:text-left mx-auto md:mx-0"
           >
             Este é um resumo da minha trajetória profissional, apresentando os
             principais projetos, experiências e construções que desenvolvi ao
@@ -57,7 +77,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-10 max-w-xl grid grid-cols-2 gap-y-3 gap-x-6 text-base md:text-lg text-foreground/85"
+            className="mt-10 max-w-xl mx-auto md:mx-0 grid grid-cols-2 gap-y-3 gap-x-6 text-base md:text-lg text-foreground/85"
           >
             {[
               "Sobre",
@@ -80,7 +100,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45 }}
-            className="mt-10 flex flex-wrap gap-4"
+            className="mt-10 flex flex-wrap gap-4 justify-center md:justify-start"
           >
             <a
               href="#sobre"

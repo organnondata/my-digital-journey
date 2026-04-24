@@ -52,20 +52,20 @@ export function ThemeToggle() {
           }`}
         />
       </span>
-      <span className="text-xs font-medium tracking-tight whitespace-nowrap">
-        <span className="text-muted-foreground">Tema de fundo:</span>{" "}
-        <span className="relative inline-block align-baseline w-[3.2rem] h-4 overflow-hidden">
+      <span className="inline-flex items-center gap-1 text-xs font-medium tracking-tight whitespace-nowrap leading-none">
+        <span className="text-muted-foreground">Tema de fundo:</span>
+        <span className="relative inline-block w-[3.2rem] h-4 overflow-hidden text-accent-vivid">
           <span
-            className={`absolute inset-0 transition-all duration-500 ${
+            className={`absolute inset-0 flex items-center justify-start transition-all duration-500 ${
               isDark ? "opacity-0 -translate-y-3" : "opacity-100 translate-y-0"
-            } text-accent-vivid`}
+            }`}
           >
             Claro
           </span>
           <span
-            className={`absolute inset-0 transition-all duration-500 ${
+            className={`absolute inset-0 flex items-center justify-start transition-all duration-500 ${
               isDark ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
-            } text-accent-vivid`}
+            }`}
           >
             Escuro
           </span>

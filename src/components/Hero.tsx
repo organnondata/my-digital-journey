@@ -17,13 +17,33 @@ export function Hero() {
         <div className="absolute inset-0 bg-grid opacity-40" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl w-full grid md:grid-cols-[1.4fr_1fr] gap-12 md:gap-20 items-center">
+      <div className="relative mx-auto max-w-6xl w-full grid md:grid-cols-[1.4fr_1fr] gap-10 md:gap-20 items-center">
         <div>
+          {/* Mobile portrait — only visible on small screens, sits at the top */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7 }}
+            className="md:hidden mb-8 flex justify-center"
+          >
+            <div className="relative">
+              <div className="size-36 sm:size-44 rounded-full overflow-hidden border-2 border-accent-vivid/40 bg-surface-elevated shadow-xl">
+                <img
+                  src={portrait}
+                  alt="Christopher Miranda"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <span className="absolute bottom-2 right-2 size-3 rounded-full bg-accent-vivid ring-2 ring-background" />
+              <div className="absolute -inset-3 -z-10 rounded-full bg-accent-vivid/20 blur-2xl" />
+            </div>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex items-center gap-3 mb-8"
+            className="flex items-center gap-3 mb-8 justify-center md:justify-start"
           >
             <span className="h-px w-10 bg-accent-vivid" />
             <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">

@@ -100,7 +100,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45 }}
-            className="mt-10 flex flex-wrap gap-4"
+            className="mt-10 flex flex-wrap gap-4 justify-center md:justify-start"
           >
             <a
               href="#sobre"

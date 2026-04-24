@@ -149,8 +149,45 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: var(--accent-vivid);
+    color: var(--accent-vivid-foreground);
+  }
+}
+
+@layer utilities {
+  .text-gradient-green {
+    background: linear-gradient(135deg, oklch(0.95 0.02 160), oklch(0.82 0.22 145));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, oklch(0.30 0.03 160 / 0.3) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0.30 0.03 160 / 0.3) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .glow-green {
+    box-shadow: 0 0 40px -10px oklch(0.78 0.20 150 / 0.5);
   }
 }

@@ -77,7 +77,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-10 max-w-xl grid grid-cols-2 gap-y-3 gap-x-6 text-base md:text-lg text-foreground/85"
+            className="mt-10 max-w-xl mx-auto md:mx-0 grid grid-cols-2 gap-y-3 gap-x-6 text-base md:text-lg text-foreground/85"
           >
             {[
               "Sobre",

@@ -287,7 +287,7 @@ function Index() {
       <Section id="contato" eyebrow="08 — Contato" title="Vamos conversar.">
         <div className="grid sm:grid-cols-2 gap-4 max-w-2xl">
           <a
-            href="https://wa.me/5500000000000"
+            href="https://wa.me/5545988352428"
             target="_blank"
             rel="noreferrer"
             className="group flex items-center justify-between rounded-2xl border border-border bg-surface-elevated/60 p-6 hover:border-accent-vivid/60 transition-colors"

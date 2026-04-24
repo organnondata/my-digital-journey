@@ -54,6 +54,61 @@ const consultorias = [
   },
 ];
 
+const ecossistemaFeatures = [
+  "Experiência inspirada em redes sociais como Facebook, com foco em usabilidade para o público acima de 40 anos",
+  "Feed dinâmico com mistura de notícias do ecossistema, comunicadores e produtos do e-commerce com base em interesse e comportamento do usuário",
+  "Estrutura de e-commerce planejada e personalizada",
+  "Sistema próprio de gateway de pagamento, com definição da jornada de compra e relacionamento com o cliente",
+  "Sistema de mensagens interno",
+  "Integração e automação de comunicação entre plataformas, como YouTube e o próprio aplicativo",
+  "Sistema de bonificação baseado em uso, engajamento e divulgação da plataforma",
+  "Estrutura de anúncios internos para priorização e destaque de produtos",
+  "Sistema de mídia interna, incluindo publicidade e rádio do próprio ecossistema",
+  "Módulos de eventos, caronas (estilo BlaBlaCar) e hospedagem",
+  "Login com verificação facial e foco em segurança",
+];
+
+const skillsGroups = [
+  {
+    title: "Skills",
+    items: [
+      "Vendas",
+      "Canais de vendas",
+      "Gestão de tráfego pago",
+      "Métricas e conversões personalizadas em ads",
+      "SEO e SEM",
+      "Produção de conteúdo",
+      "Sites",
+      "Gateways de pagamento",
+      "E-commerce",
+      "Google Ads",
+      "Meta Ads",
+      "TikTok Ads",
+      "UX e jornada do cliente",
+      "Prompts e IA",
+    ],
+  },
+  {
+    title: "Idiomas",
+    items: ["Português", "Inglês", "Espanhol"],
+  },
+  {
+    title: "Design",
+    items: [
+      "Web Design",
+      "Photoshop",
+      "Illustrator",
+      "Animação",
+      "Edição de vídeo",
+      "UX Design",
+    ],
+  },
+  {
+    title: "Computação",
+    items: ["JavaScript", "HTML", "Tailwind", "CSS", "Estudando Python"],
+  },
+];
+
 function Index() {
   return (
     <main className="bg-background text-foreground min-h-screen">
@@ -74,7 +129,7 @@ function Index() {
         </div>
       </Section>
 
-      {/* ECOSSISTEMA */}
+      {/* ECOSSISTEMA — TRABALHO MAIS RECENTE */}
       <Section
         id="ecossistema"
         eyebrow="02 — Trabalho mais recente"
@@ -84,18 +139,26 @@ function Index() {
           <ProjectCard label="Contexto" title="O ponto a ser resolvido." number="01">
             <p className="leading-relaxed">
               Junto de um parceiro, desenvolvi o protótipo de um ecossistema
-              digital. O ecossistema já possuía moeda própria, banco, produtos
-              e forte comercialização interna, com alta demanda — mas não
+              digital.
+            </p>
+            <p className="leading-relaxed">
+              O objetivo do projeto era resolver um ponto central: o ecossistema
+              já possuía uma moeda própria, banco, produtos e uma forte
+              comercialização interna, além de alta demanda. No entanto, não
               existia uma ferramenta que conectasse esses elementos,
-              fortalecesse a comunidade e melhorasse a circulação de
-              informações.
+              fortalecesse a comunidade, incentivasse o uso da moeda e
+              melhorasse a circulação de informações entre os participantes.
             </p>
           </ProjectCard>
-          <ProjectCard label="Solução" title="Conceito do aplicativo." number="02">
+          <ProjectCard label="Solução" title="Concepção do aplicativo." number="02">
             <p className="leading-relaxed">
-              Desenvolvi todo o conceito de uma plataforma única que conecta
-              comunidade, consumo, conteúdo e pagamento, pensada para um
-              público acima de 40 anos com curva de uso natural e familiar.
+              A partir disso, desenvolvi todo o conceito do aplicativo — uma
+              plataforma única que conecta comunidade, consumo, conteúdo e
+              pagamento, pensada para um público acima de 40 anos com curva de
+              uso natural e familiar.
+            </p>
+            <p className="leading-relaxed text-muted-foreground">
+              A seguir, as funcionalidades estruturadas no protótipo.
             </p>
           </ProjectCard>
         </div>
@@ -107,21 +170,7 @@ function Index() {
               Funcionalidades
             </span>
           </div>
-          <FeatureList
-            items={[
-              "Experiência estilo rede social (foco em público 40+)",
-              "Feed inteligente com conteúdos e produtos",
-              "E-commerce personalizado",
-              "Sistema de pagamento próprio",
-              "Mensagens internas",
-              "Integração com YouTube e outras plataformas",
-              "Sistema de bonificação",
-              "Sistema de anúncios internos",
-              "Rádio e mídia interna",
-              "Eventos, caronas e hospedagem",
-              "Login com verificação facial",
-            ]}
-          />
+          <FeatureList items={ecossistemaFeatures} />
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="https://achi-bilu-feed.vercel.app/feed"
@@ -136,14 +185,19 @@ function Index() {
         </div>
       </Section>
 
-      {/* FREELA */}
+      {/* FREELAS */}
       <Section
         id="freela"
-        eyebrow="03 — Freela mais recente"
-        title="Mentoria de marketing — Beatriz Ilumina."
+        eyebrow="03 — Freelas"
+        title="Mentorias e estruturação digital."
       >
+        {/* Beatriz Ilumina */}
         <div className="grid md:grid-cols-[1.2fr_1fr] gap-10">
-          <ProjectCard label="Cliente" title="@Beatrizilumina" number="01">
+          <ProjectCard
+            label="Cliente · Freela mais recente"
+            title="Beatriz Ilumina"
+            number="01"
+          >
             <a
               href="https://www.youtube.com/@Beatrizilumina"
               target="_blank"
@@ -153,18 +207,22 @@ function Index() {
               <Youtube className="size-4" />
               youtube.com/@Beatrizilumina
             </a>
-            <p className="leading-relaxed">
-              Mentoria de 1 mês com foco em estruturação de marketing digital
-              e canais de vendas.
+            <p className="leading-relaxed text-muted-foreground">
+              Terapeuta holística e Mãe de Santo.
             </p>
+            <p className="leading-relaxed">
+              Realizei uma mentoria de 1 mês com foco na construção de canais
+              de marketing digital e estruturação de vendas.
+            </p>
+            <p className="leading-relaxed">Durante o período, trabalhamos:</p>
             <FeatureList
               columns={1}
               items={[
-                "Produção de conteúdo",
-                "Planejamento de postagens",
-                "Conversão",
+                "Produção e planejamento de conteúdo",
+                "Organização das postagens",
+                "Estratégias de conversão nas páginas",
                 "Tráfego pago",
-                "Expansão de canais",
+                "Expansão para outras redes além do Instagram",
               ]}
             />
           </ProjectCard>
@@ -172,29 +230,38 @@ function Index() {
             <span className="text-xs uppercase tracking-[0.25em] text-accent-vivid">
               Resultado
             </span>
-            <p className="text-2xl md:text-3xl font-display font-medium leading-tight mt-6">
-              Crescimento de vendas e agenda com alta demanda.
+            <p className="text-xl md:text-2xl font-display font-medium leading-snug mt-6">
+              Atualmente, a cliente atua nas três frentes estruturadas e
+              relatou aumento consistente de resultados e vendas. A agenda
+              passou a ter preenchimento recorrente, e seguimos com
+              consultorias pontuais para otimizações.
             </p>
           </div>
         </div>
-      </Section>
 
-      {/* ARAZZÃO */}
-      <Section
-        id="arazzao"
-        eyebrow="04 — Projeto"
-        title="Arazzão — operação digital de evento."
-      >
-        <div className="grid md:grid-cols-[1.2fr_1fr] gap-10">
-          <ProjectCard label="Escopo" title="Estruturação completa da operação digital." number="01">
+        {/* Arazzão */}
+        <div className="mt-10 grid md:grid-cols-[1.2fr_1fr] gap-10">
+          <ProjectCard
+            label="Projeto"
+            title="Arazzão — operação digital de evento."
+            number="02"
+          >
+            <p className="leading-relaxed">
+              Desenvolvimento das ferramentas de lançamento para o projeto
+              <span className="text-accent-vivid"> arazzao.com</span>.
+            </p>
+            <p className="leading-relaxed">
+              Fui responsável, junto ao time, por estruturar toda a captação
+              digital do evento:
+            </p>
             <FeatureList
               items={[
                 "Site",
                 "Tráfego pago",
-                "Conteúdo",
-                "Checkout",
+                "Produção de conteúdo",
+                "Checkout de pagamento",
                 "E-mail marketing",
-                "Check-in",
+                "Sistema de check-in",
                 "Grupo de engajamento",
               ]}
             />
@@ -213,12 +280,12 @@ function Index() {
       {/* CONSULTORIAS */}
       <Section
         id="consultorias"
-        eyebrow="05 — Consultorias 2025"
+        eyebrow="04 — Consultorias 2025"
         title="Atuação em posicionamento e canais de venda."
       >
         <p className="max-w-2xl text-foreground/80 leading-relaxed mb-10">
-          Consultorias com foco em posicionamento, canais de venda, tráfego
-          pago, conteúdo e estrutura digital.
+          Atuação em posicionamento, canais de venda, tráfego pago e estrutura
+          digital.
         </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {consultorias.map((c) => (
@@ -241,34 +308,42 @@ function Index() {
         </div>
       </Section>
 
-      {/* XBRI */}
+      {/* XBRI — EXPERIÊNCIAS */}
       <Section
         id="xbri"
-        eyebrow="06 — Experiência profissional"
+        eyebrow="05 — Experiências"
         title="XBRI Pneus."
       >
         <div className="grid md:grid-cols-[1fr_1.4fr] gap-10">
-          <div>
+          <div className="space-y-6">
             <p className="text-foreground/85 leading-relaxed">
-              Trajetória iniciando em vendas até assumir o marketing digital
-              da empresa.
+              Atuei na XBRI, empresa multinacional do setor de pneus com sede
+              em Ciudad del Este, Paraguai.
             </p>
-            <div className="mt-8 rounded-xl border border-accent-vivid/30 bg-accent-vivid/5 p-5">
+            <p className="text-foreground/85 leading-relaxed">
+              Iniciei na área comercial e evoluí para o marketing digital, com
+              foco em crescimento dos resultados da empresa.
+            </p>
+            <div className="rounded-xl border border-accent-vivid/30 bg-accent-vivid/5 p-5">
               <p className="text-xs uppercase tracking-[0.2em] text-accent-vivid mb-2">
                 Nota
               </p>
               <p className="text-sm text-foreground/90 leading-relaxed">
-                Desenvolvimento de projeto social com impacto regional.
+                Também desenvolvi um projeto social com foco em impacto e
+                visibilidade regional.
               </p>
             </div>
           </div>
           <div className="rounded-2xl border border-border bg-surface-elevated/60 p-8 md:p-10">
+            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">
+              Principais atuações
+            </p>
             <FeatureList
               columns={1}
               items={[
                 "Estruturação do marketing digital",
                 "Criação de canais de aquisição",
-                "Desenvolvimento do e-commerce",
+                "Desenvolvimento e fortalecimento do e-commerce",
                 "Criação de equipe dedicada",
                 "Apoio estratégico de marca",
               ]}
@@ -278,15 +353,45 @@ function Index() {
       </Section>
 
       {/* OUTROS */}
-      <Section id="outros" eyebrow="07 — Outros projetos">
+      <Section id="outros" eyebrow="06 — Outros projetos">
         <p className="text-2xl md:text-3xl font-display font-medium leading-snug max-w-3xl text-foreground/90">
-          Participação em eventos, shows, cursos e projetos de startups como{" "}
+          Participação em eventos, cursos, shows e projetos de startups como{" "}
           <span className="text-accent-vivid">VocêInvest</span>.
         </p>
       </Section>
 
+      {/* HABILIDADES */}
+      <Section
+        id="habilidades"
+        eyebrow="07 — Habilidades"
+        title="Conhecimentos e ferramentas."
+      >
+        <div className="grid md:grid-cols-2 gap-6">
+          {skillsGroups.map((group) => (
+            <div
+              key={group.title}
+              className="rounded-2xl border border-border bg-surface-elevated/60 p-8"
+            >
+              <p className="text-xs uppercase tracking-[0.25em] text-accent-vivid mb-6">
+                {group.title}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <span
+                    key={item}
+                    className="text-sm px-3 py-1.5 rounded-full border border-border bg-background/40 text-foreground/90"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       {/* CONTATO */}
-      <Section id="contato" eyebrow="08 — Contato" title="Vamos conversar.">
+      <Section id="contato" eyebrow="08 — Contatos" title="Vamos conversar.">
         <div className="grid sm:grid-cols-2 gap-4 max-w-2xl">
           <a
             href="https://wa.me/5545988352428"

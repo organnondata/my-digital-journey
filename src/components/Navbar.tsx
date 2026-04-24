@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
   { href: "#ecossistema", label: "Trabalho" },
   { href: "#freela", label: "Freelas" },
-  { href: "#xbri", label: "Experiência" },
-  { href: "#contato", label: "Contato" },
+  { href: "#xbri", label: "Experiências" },
+  { href: "#contato", label: "Contatos" },
+  { href: "#habilidades", label: "Habilidades" },
 ];
 
 export function Navbar() {
@@ -31,7 +33,7 @@ export function Navbar() {
           <span className="h-2 w-2 rounded-full bg-accent-vivid group-hover:scale-125 transition-transform" />
           <span className="font-display font-semibold tracking-tight">Christopher Miranda</span>
         </a>
-        <ul className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+        <ul className="hidden lg:flex items-center gap-7 text-sm text-muted-foreground">
           {links.map((l) => (
             <li key={l.href}>
               <a
@@ -43,12 +45,15 @@ export function Navbar() {
             </li>
           ))}
         </ul>
-        <a
-          href="#contato"
-          className="hidden md:inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-full bg-accent-vivid text-accent-vivid-foreground hover:opacity-90 transition-opacity"
-        >
-          Entrar em contato
-        </a>
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <a
+            href="#contato"
+            className="hidden md:inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-full bg-accent-vivid text-accent-vivid-foreground hover:opacity-90 transition-opacity"
+          >
+            Contato
+          </a>
+        </div>
       </nav>
     </header>
   );

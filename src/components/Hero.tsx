@@ -25,12 +25,9 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-3 mb-8"
           >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-vivid opacity-60" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-vivid" />
-            </span>
+            <span className="h-px w-10 bg-accent-vivid" />
             <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              Disponível para projetos · 2025
+              Currículo · 2025
             </span>
           </motion.div>
 
@@ -51,8 +48,8 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-8 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed"
           >
-            Este é um resumo da minha trajetória profissional, com foco nos
-            principais projetos, experiências e trabalhos que desenvolvi ao
+            Este é um resumo da minha trajetória profissional, apresentando os
+            principais projetos, experiências e construções que desenvolvi ao
             longo dos últimos anos.
           </motion.p>
 
@@ -60,13 +57,15 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-8 max-w-xl space-y-2 text-sm text-foreground/80"
+            className="mt-8 max-w-xl grid grid-cols-2 gap-y-2 gap-x-6 text-sm text-foreground/80"
           >
             {[
-              "Desenvolvimento de Ecossistema Digital",
-              "Projetos e Freelances",
-              "Experiência Profissional (XBRI Pneus)",
-              "Consultorias e Outros Projetos",
+              "Sobre",
+              "Trabalho",
+              "Freelas",
+              "Experiências",
+              "Contatos",
+              "Habilidades",
             ].map((item, i) => (
               <li key={item} className="flex items-baseline gap-3">
                 <span className="text-accent-vivid font-mono text-xs">
@@ -84,10 +83,10 @@ export function Hero() {
             className="mt-10 flex flex-wrap gap-4"
           >
             <a
-              href="#ecossistema"
+              href="#sobre"
               className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-accent-vivid text-accent-vivid-foreground font-medium hover:glow-green transition-all"
             >
-              Ver experiência
+              Explorar
               <ArrowDown className="size-4 group-hover:translate-y-0.5 transition-transform" />
             </a>
             <a

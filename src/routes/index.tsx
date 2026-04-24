@@ -168,24 +168,26 @@ function Index() {
         <div className="grid lg:grid-cols-2 gap-6">
           <ProjectCard label="Contexto" title="O ponto a ser resolvido." number="01">
             <p>
-              Junto de um parceiro, desenvolvi o protótipo de um ecossistema
-              digital.
+              Fui contratado para desenvolver, sozinho, o protótipo de um
+              ecossistema digital. O cliente era o responsável por levar a
+              proposta ao ecossistema, e a execução completa do projeto ficou
+              sob a minha responsabilidade.
             </p>
             <p>
-              O objetivo do projeto era resolver um ponto central: o ecossistema
-              já possuía uma moeda própria, banco, produtos e uma forte
-              comercialização interna, além de alta demanda. No entanto, não
-              existia uma ferramenta que conectasse esses elementos,
-              fortalecesse a comunidade, incentivasse o uso da moeda e
-              melhorasse a circulação de informações entre os participantes.
+              O objetivo era resolver um ponto central: o ecossistema já possuía
+              uma moeda própria, banco, produtos e uma forte comercialização
+              interna, além de alta demanda. No entanto, não existia uma
+              ferramenta que conectasse esses elementos, fortalecesse a
+              comunidade, incentivasse o uso da moeda e melhorasse a circulação
+              de informações entre os participantes.
             </p>
           </ProjectCard>
           <ProjectCard label="Solução" title="Concepção do aplicativo." number="02">
             <p>
-              A partir disso, desenvolvi todo o conceito do aplicativo — uma
-              plataforma única que conecta comunidade, consumo, conteúdo e
-              pagamento, pensada para um público acima de 40 anos com curva de
-              uso natural e familiar.
+              A partir disso, desenvolvi sozinho todo o conceito e o protótipo
+              do aplicativo — uma plataforma única que conecta comunidade,
+              consumo, conteúdo e pagamento, pensada para um público acima de
+              40 anos com curva de uso natural e familiar.
             </p>
             <p className="text-muted-foreground">
               A seguir, as funcionalidades estruturadas no protótipo.
@@ -279,7 +281,7 @@ function Index() {
                   .
                 </p>
                 <p>
-                  Fui responsável, junto ao time, por estruturar toda a captação
+                  Fui responsável, sozinho, por estruturar toda a captação
                   digital do evento:
                 </p>
                 <FeatureList
@@ -370,7 +372,7 @@ function Index() {
               {
                 step: "03",
                 phase: "Liderança",
-                desc: "Frente do marketing digital, com foco em crescimento.",
+                desc: "Frente do marketing digital, com foco em crescimento das equipes.",
               },
             ].map((s) => (
               <div
@@ -388,6 +390,18 @@ function Index() {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Narrativa da trajetória */}
+          <div className="p-8 md:p-12 border-b-2 border-border bg-background/30">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-accent-vivid mb-5">
+              Trajetória na empresa
+            </p>
+            <p className="text-lg md:text-2xl leading-relaxed text-foreground/90 max-w-4xl">
+              Iniciei na área comercial e, em pouco tempo, evoluí para o time de
+              vendas de grandes volumes. Posteriormente, assumi a frente do
+              marketing digital da empresa com foco em crescimento das equipes.
+            </p>
           </div>
 
           {/* Atuações */}
@@ -462,7 +476,7 @@ function Index() {
       <Section id="contato" eyebrow="08 — Contato">
         <div className="max-w-2xl">
           <a
-            href="https://wa.me/5545988352428"
+            href="https://wa.me/+5545988352428"
             target="_blank"
             rel="noreferrer"
             className="group flex items-center justify-between rounded-2xl border-2 border-border bg-surface-elevated/80 p-6 md:p-8 hover:border-accent-vivid transition-colors shadow-sm"

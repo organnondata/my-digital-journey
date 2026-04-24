@@ -9,9 +9,21 @@ interface SectionProps {
   className?: string;
 }
 
+function splitEyebrow(eyebrow?: string) {
+  if (!eyebrow) return { number: null as string | null, label: "" };
+  const match = eyebrow.match(/^(\d{2})\s*[—\-–]\s*(.+)$/);
+  if (match) return { number: match[1], label: match[2] };
+  return { number: null, label: eyebrow };
+}
+
 export function Section({ id, eyebrow, title, children, className = "" }: SectionProps) {
+  const { number, label } = splitEyebrow(eyebrow);
+
   return (
-    <section id={id} className={`relative py-24 md:py-32 px-6 md:px-10 ${className}`}>
+    <section
+      id={id}
+      className={`relative py-28 md:py-40 px-6 md:px-10 border-t border-border/60 ${className}`}
+    >
       <div className="mx-auto max-w-6xl">
         {(eyebrow || title) && (
           <motion.div
@@ -22,11 +34,18 @@ export function Section({ id, eyebrow, title, children, className = "" }: Sectio
             className="mb-14 md:mb-20"
           >
             {eyebrow && (
-              <div className="flex items-center gap-3 mb-5">
-                <span className="h-px w-10 bg-accent-vivid" />
-                <span className="text-xs font-medium uppercase tracking-[0.25em] text-accent-vivid">
-                  {eyebrow}
-                </span>
+              <div className="flex items-center gap-4 md:gap-6 mb-6">
+                {number && (
+                  <span className="font-display font-bold text-4xl md:text-6xl text-accent-vivid leading-none tabular-nums">
+                    {number}
+                  </span>
+                )}
+                <div className="flex items-center gap-3">
+                  <span className="h-px w-8 md:w-10 bg-accent-vivid" />
+                  <span className="text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-accent-vivid">
+                    {label}
+                  </span>
+                </div>
               </div>
             )}
             {title && (

@@ -27,7 +27,7 @@ export function Hero() {
           >
             <span className="h-px w-10 bg-accent-vivid" />
             <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              Currículo · 2025
+              Currículo · 2026
             </span>
           </motion.div>
 
@@ -46,7 +46,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-8 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed"
+            className="mt-8 max-w-2xl text-lg md:text-2xl text-foreground/90 leading-relaxed font-light"
           >
             Este é um resumo da minha trajetória profissional, apresentando os
             principais projetos, experiências e construções que desenvolvi ao
@@ -57,7 +57,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-8 max-w-xl grid grid-cols-2 gap-y-2 gap-x-6 text-sm text-foreground/80"
+            className="mt-10 max-w-xl grid grid-cols-2 gap-y-3 gap-x-6 text-base md:text-lg text-foreground/85"
           >
             {[
               "Sobre",
@@ -68,10 +68,10 @@ export function Hero() {
               "Habilidades",
             ].map((item, i) => (
               <li key={item} className="flex items-baseline gap-3">
-                <span className="text-accent-vivid font-mono text-xs">
+                <span className="text-accent-vivid font-display font-bold text-lg md:text-xl tabular-nums">
                   0{i + 1}
                 </span>
-                <span>{item}</span>
+                <span className="font-medium">{item}</span>
               </li>
             ))}
           </motion.ol>

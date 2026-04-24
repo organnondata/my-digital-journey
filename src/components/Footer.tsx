@@ -7,7 +7,7 @@ export function Footer() {
           <span>Christopher Miranda — {new Date().getFullYear()}</span>
         </div>
         <p className="text-xs uppercase tracking-[0.2em]">
-          Marketing · Growth · Tecnologia
+          Currículo · 2026
         </p>
       </div>
     </footer>

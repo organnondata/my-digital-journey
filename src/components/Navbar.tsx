@@ -29,7 +29,7 @@ export function Navbar() {
       <nav className="mx-auto max-w-6xl px-6 md:px-10 h-16 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2 group">
           <span className="h-2 w-2 rounded-full bg-accent-vivid group-hover:scale-125 transition-transform" />
-          <span className="font-display font-semibold tracking-tight">Seu Nome</span>
+          <span className="font-display font-semibold tracking-tight">Christopher Miranda</span>
         </a>
         <ul className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           {links.map((l) => (

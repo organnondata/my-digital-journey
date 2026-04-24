@@ -18,17 +18,17 @@ import { Footer } from "@/components/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Seu Nome — Marketing, Growth & Tecnologia" },
+      { title: "Christopher Miranda | Currículo" },
       {
         name: "description",
         content:
-          "Currículo interativo: experiência prática em marketing digital, ecossistemas digitais, tráfego pago, conteúdo e operação de canais de venda.",
+          "Apresentação profissional e trajetória de Christopher Miranda em marketing, tecnologia e projetos digitais.",
       },
-      { property: "og:title", content: "Seu Nome — Marketing, Growth & Tecnologia" },
+      { property: "og:title", content: "Christopher Miranda | Currículo" },
       {
         property: "og:description",
         content:
-          "Apresentação profissional: trajetória em marketing, growth e desenvolvimento de produto digital.",
+          "Apresentação profissional e trajetória em marketing, tecnologia e projetos digitais.",
       },
       { property: "og:image", content: ogImage },
       { property: "og:type", content: "website" },
@@ -81,19 +81,21 @@ function Index() {
         title="Desenvolvimento de Ecossistema Digital."
       >
         <div className="grid lg:grid-cols-2 gap-6">
-          <ProjectCard label="Contexto" title="O problema do ecossistema." number="01">
+          <ProjectCard label="Contexto" title="O ponto a ser resolvido." number="01">
             <p className="leading-relaxed">
-              Um ecossistema com moeda própria, banco, produtos e serviços —
-              tudo operando de forma fragmentada, sem integração entre as
-              pontas. Falta de fluxo único entre comunidade, conteúdo, venda e
-              pagamento.
+              Junto de um parceiro, desenvolvi o protótipo de um ecossistema
+              digital. O ecossistema já possuía moeda própria, banco, produtos
+              e forte comercialização interna, com alta demanda — mas não
+              existia uma ferramenta que conectasse esses elementos,
+              fortalecesse a comunidade e melhorasse a circulação de
+              informações.
             </p>
           </ProjectCard>
-          <ProjectCard label="Solução" title="Plataforma integrada e social." number="02">
+          <ProjectCard label="Solução" title="Conceito do aplicativo." number="02">
             <p className="leading-relaxed">
-              Desenvolvimento de uma plataforma única que conecta comunidade,
-              consumo, conteúdo e pagamento, pensada para um público 40+ com
-              uma curva de uso natural e familiar.
+              Desenvolvi todo o conceito de uma plataforma única que conecta
+              comunidade, consumo, conteúdo e pagamento, pensada para um
+              público acima de 40 anos com curva de uso natural e familiar.
             </p>
           </ProjectCard>
         </div>
